@@ -1,6 +1,13 @@
 'use client'
 import {motion} from 'motion/react'
 const Nav = ()=>{
+
+
+    const HandleLogin = (e)=>{
+            e.preventDefault()
+            window.location.href='/api/login'
+    }
+
     return(
         <motion.div
         initial={{y:-20}}
@@ -35,7 +42,7 @@ const Nav = ()=>{
 
     {/* Right Side */}
     <div className="flex items-center gap-4">
-      <button className="hidden md:block text-sm font-medium text-gray-600 hover:text-black transition">
+      <button className="hidden md:block text-sm font-medium text-gray-600 hover:text-black transition" onClick={HandleLogin}>
         Login
       </button>
 
