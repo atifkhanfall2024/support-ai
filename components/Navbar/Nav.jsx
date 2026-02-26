@@ -1,8 +1,9 @@
 'use client'
 import {motion} from 'motion/react'
-const Nav = ()=>{
 
+const Nav = ({email})=>{
 
+    
     const HandleLogin = (e)=>{
             e.preventDefault()
             window.location.href='/api/login'
@@ -43,7 +44,7 @@ const Nav = ()=>{
     {/* Right Side */}
     <div className="flex items-center gap-4">
       <button className="hidden md:block text-sm font-medium text-gray-600 hover:text-black transition" onClick={HandleLogin}>
-        Login
+        {email?email :'Login'}
       </button>
 
       <button className="bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
