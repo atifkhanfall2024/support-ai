@@ -18,7 +18,7 @@ export default async function RootLayout({children}) {
 
   return (
          <>
-         <Nav  email={session?.user?.email}/>
+         <Nav  email={session?.user?.email} picture={session?.user?.userProfile?.picture}/>
         {children}</>
   );
 }
