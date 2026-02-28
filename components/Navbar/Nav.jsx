@@ -2,8 +2,11 @@
 import { motion } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
 import Image from "next/image"
+import { useRouter } from 'next/navigation'
 
 const Nav = ({ email , picture }) => {
+
+    const router = useRouter()
 
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -107,7 +110,7 @@ const Nav = ({ email , picture }) => {
               </div>
             )}
 
-            <button className="bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+            <button className="bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" onClick={()=>router.push('/dashboard/textForm')}>
               Get Started
             </button>
 
