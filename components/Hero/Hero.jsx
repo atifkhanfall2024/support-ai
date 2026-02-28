@@ -32,7 +32,7 @@ const Hero = ()=>{
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
-        <button className="bg-black text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" onClick={()=>router.push('/dashboard/textForm')}>
+        <button className="bg-black text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" onClick={()=>router.push('/textForm')}>
           Get Started
         </button>
 

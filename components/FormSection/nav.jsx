@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import Image from "next/image"
 import { useRouter } from 'next/navigation'
 
-const Nav = ({ email , picture }) => {
+const Nav = ({ picture }) => {
 
     const router = useRouter()
 
@@ -71,14 +71,9 @@ const Nav = ({ email , picture }) => {
           {/* Right Side */}
           <div className="flex items-center gap-4 relative">
 
-            {!email ? (
-              <button
-                className="hidden md:block text-sm font-medium text-gray-600 hover:text-black transition"
-                onClick={HandleLogin}
-              >
-                Login
-              </button>
-            ) : (
+           
+             
+            
               <div className="relative" ref={dropdownRef}>
                 
 <Image
@@ -108,10 +103,10 @@ const Nav = ({ email , picture }) => {
                   </div>
                 )}
               </div>
-            )}
+            
 
-            <button className="bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" onClick={()=>router.push('/textForm')}>
-              Get Started
+            <button className="bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300" onClick={()=>router.push('')}>
+              Embeded Code
             </button>
 
           </div>
