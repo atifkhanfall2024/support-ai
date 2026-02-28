@@ -7,7 +7,7 @@ export async function GET(req:NextRequest) {
         const url = 'http://localhost:3000/dashboard'
          const {searchParams} = new URL(req.url)
     const code =  searchParams.get("code")
-    console.log("My code :> " , code);
+   // console.log("My code :> " , code);
     if(!code){
         return NextResponse.json({message:"Code is not Present"} , {status:400})
     }

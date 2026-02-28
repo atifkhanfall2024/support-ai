@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export default async function RootLayout({children}) {
 
     const session =  await VerifyToken()
-    console.log("User Session ;> " , session);
+   // console.log("User Session ;> " , session);
 
   return (
          <>

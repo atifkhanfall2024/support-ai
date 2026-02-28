@@ -1,9 +1,11 @@
 import Hero from "../../../components/Hero/Hero"
+import { Cards } from "../../../components/WhySupportCards/why"
 const Dashboard = ()=>{
     return(
         <div>
         <Hero/>
-        <h1>Dashobard</h1>
+        <Cards/>
+      
         </div>
 
     )

@@ -6,5 +6,6 @@ export async function GET(req:NextRequest){
 
     const uri  = scalekit.getAuthorizationUrl(redirectUri)
      //console.log(uri);
+     // this will give authorized url of user
     return NextResponse.redirect(uri)
 }
