@@ -5,7 +5,7 @@ import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 const Data = ({Userid})=>{
-
+console.log(Userid);
 const [businessName , setbusinessName] = useState('')
 const [email , setemail] = useState('')
 const [businessMessage , setbusinessMessage] = useState('')
