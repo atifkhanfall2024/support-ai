@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "@scalekit-sdk/node": "^2.2.2",
+    "axios": "^1.13.6",
     "framer-motion": "^12.34.3",
     "mongoose": "^9.2.3",
     "motion": "^12.34.3",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-spinner": "^0.2.7",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
     "validator": "^13.15.26"
   },
   "devDependencies": {
