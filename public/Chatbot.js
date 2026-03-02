@@ -1,7 +1,7 @@
 // Immediately Invoked Function Expression
 (function () {
 
-    const apiUrl = new URL("/api/agent", ownerScript.src).href;
+   
     const ownerScript = document.currentScript;
     const Userid = ownerScript.getAttribute("data-owner-id");
 
@@ -9,7 +9,7 @@
         console.log("Owner id is not found");
         return;
     }
-
+     const apiUrl = new URL("/api/agent", ownerScript.src).href;
     // ===============================
     // Typing Animation Style
     // ===============================
