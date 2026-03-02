@@ -94,7 +94,7 @@ const Nav = ({ email , picture }) => {
                 {open && (
                   <div className="absolute right-0 mt-3 w-40 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
                     <button
-                      onClick={() => window.location.href = '/getstarted'}
+                      onClick={() => window.location.href = '/dashboard'}
                       className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition"
                     >
                       Dashboard
