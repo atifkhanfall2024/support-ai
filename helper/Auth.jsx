@@ -11,7 +11,7 @@ export async function VerifyToken(){
     }
 
     const session = await scalekit.validateToken(GetToken)
-    console.log(session);
+    //console.log(session);
     const user = await scalekit.user.getUser(session.sub)
     return user
     } catch (error) {

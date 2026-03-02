@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req:NextRequest) {
     try {
-        const redirectUri= 'http://localhost:3000/api/callback'
-        const url = 'http://localhost:3000/dashboard'
+        const redirectUri= `${process.env.URL}/api/callback`
+        const url = `${process.env.URL}/dashboard`
          const {searchParams} = new URL(req.url)
     const code =  searchParams.get("code")
    // console.log("My code :> " , code);
@@ -19,7 +19,7 @@ export async function GET(req:NextRequest) {
     res.cookies.set("token" , session.accessToken , {
         httpOnly:true,
         maxAge:24*60*60*1000,
-        secure:false,
+        secure:true,
         path:'/'
     })
 
