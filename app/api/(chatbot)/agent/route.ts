@@ -5,6 +5,19 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+
+
+export async function OPTIONS() {
+    return new Response(null, {
+        status: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+        },
+    });
+}
+
 export async function POST(req:NextRequest) {
     
     try {
@@ -40,6 +53,7 @@ BEHAVIOR & TONE:
 • Focus on solutions rather than problems.
 
 RESPONSE GUIDELINES:
+. donot give answer too long always give answer to the point 
 • Answer using the provided business knowledge.
 • If information is missing, politely say you will escalate the issue.
 • When necessary, provide the support email for further assistance.

@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const ConnectDb:()=>Promise<void> = async()=>{
 
     const url = process.env.Connection_String
-    console.log(url);
+   // console.log(url);
     if(!url){
         throw new Error('Connection Url is Missing.......')
     }
