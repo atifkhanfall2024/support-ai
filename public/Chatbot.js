@@ -1,7 +1,7 @@
 // Immediately Invoked Function Expression
 (function () {
 
-    const apiUrl = `${process.env.URL}/api/agent`;
+    const apiUrl = `${process.env.NEXT_PUBLIC_URL}/api/agent`;
     const ownerScript = document.currentScript;
     const Userid = ownerScript.getAttribute("UserId");
 

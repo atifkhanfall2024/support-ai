@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req:NextRequest) {
     try {
-        const redirectUri= `${process.env.URL}/api/callback`
-        const url = `${process.env.URL}/dashboard`
+        const redirectUri= `${process.env.NEXT_PUBLIC_URL}/api/callback`
+        const url = `${process.env.NEXT_PUBLIC_URL}/dashboard`
          const {searchParams} = new URL(req.url)
     const code =  searchParams.get("code")
    // console.log("My code :> " , code);

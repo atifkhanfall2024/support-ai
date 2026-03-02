@@ -7,7 +7,7 @@ export default function Embed({ ownerid }) {
   const [copy, setCopy] = useState(false);
 
   const embeddedCode = `<script
-  src="${process.env.URL}/Chatbot.js"
+  src="${process.env.NEXT_PUBLIC_URL}/Chatbot.js"
   data-owner-id="${ownerid}"
 ></script>`;
 
