@@ -3,7 +3,7 @@
 
     const apiUrl = `${process.env.NEXT_PUBLIC_URL}/api/agent`;
     const ownerScript = document.currentScript;
-    const Userid = ownerScript.getAttribute("UserId");
+    const Userid = ownerScript.getAttribute("data-owner-id");
 
     if (!Userid) {
         console.log("Owner id is not found");
