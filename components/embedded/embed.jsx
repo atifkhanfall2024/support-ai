@@ -7,7 +7,7 @@ export default function Embed({ ownerid }) {
   const [copy, setCopy] = useState(false);
 
   const embeddedCode = `<script
-  src="https://support-ai-beige.vercel.app/Chatbot.js"
+  src="${process.env.URL}/Chatbot.js"
   data-owner-id="${ownerid}"
 ></script>`;
 
