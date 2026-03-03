@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/textForm/layout.jsx"  ],
+, "app/textForm/layout.jsx", "lib/stripe.js"  ],
   "exclude": ["node_modules"]
 }

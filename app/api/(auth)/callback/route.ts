@@ -1,4 +1,4 @@
-import { scalekit } from "@/lib/scalekit";
+import { scalekit } from "@/lib/Scalekit";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req:NextRequest) {

@@ -1,5 +1,5 @@
 import {cookies} from 'next/headers'
-import {scalekit} from './scalekit'
+import {scalekit} from './Scalekit'
 export async function VerifyToken(){
 
     try {
