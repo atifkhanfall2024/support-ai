@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getStripe } from "@/lib/stripe";
+import { getStripe } from "../../../lib/scalekit"; // relative path
 
 export async function POST(req) {
   try {
@@ -19,9 +19,7 @@ export async function POST(req) {
         {
           price_data: {
             currency: "usd",
-            product_data: {
-              name: `${plan} Plan`
-            },
+            product_data: { name: `${plan} Plan` },
             unit_amount: priceMap[plan]
           },
           quantity: 1
@@ -34,6 +32,7 @@ export async function POST(req) {
     return NextResponse.json({ url: session.url });
 
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
