@@ -1,15 +1,14 @@
-import Stripe from "stripe";
 import { NextResponse } from "next/server";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+import { getStripe } from "@/lib/stripe";
 
 export async function POST(req) {
   try {
+    const stripe = getStripe();
     const { plan } = await req.json();
 
     const priceMap = {
       starter: 0,
-      pro: 2900, // $29 in cents
+      pro: 2900,
       enterprise: 9900
     };
 
@@ -28,11 +27,12 @@ export async function POST(req) {
           quantity: 1
         }
       ],
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard?success=true`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/pricing?canceled=true`
+      success_url: `${process.env.NEXT_PUBLIC_URL}/dashboard?success=true`,
+      cancel_url: `${process.env.NEXT_PUBLIC_URL}/dashboard/pricing?canceled=true`
     });
 
     return NextResponse.json({ url: session.url });
+
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
