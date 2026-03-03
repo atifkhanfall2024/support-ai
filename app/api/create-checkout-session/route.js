@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getStripe } from "../../../lib/scalekit"; // relative path
+import { getStripe } from "../../../lib/stripe"; // relative path
 
 export async function POST(req) {
   try {
