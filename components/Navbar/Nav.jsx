@@ -64,7 +64,7 @@ const Nav = ({ email , picture }) => {
           {/* Nav Links */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
             <a href="/dashboard/features" className="hover:text-black transition-colors">Features</a>
-            <a href="#" className="hover:text-black transition-colors">Pricing</a>
+            <a href="/dashboard/pricing" className="hover:text-black transition-colors">Pricing</a>
             <a href="#" className="hover:text-black transition-colors">Docs</a>
           </div>
 
